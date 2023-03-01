@@ -6,4 +6,9 @@ edition = "2021"
 
 [dependencies]
 rayon = "1.6.1"
+
+[dev-dependencies]
 rustyline = { version = "11.0.0", default-features = false }
+
+[[example]]
+name = "cli"
