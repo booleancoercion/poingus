@@ -27,8 +27,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
     };
 
     let dictionary = get_dictionary(&dictionary)?;
-    let mut output: Vec<&str> =
-        unnamed_discord_thing::get_matches(&username, nickname.as_deref(), &dictionary);
+    let mut output: Vec<&str> = poingus::get_matches(&username, nickname.as_deref(), &dictionary);
     output.sort_unstable_by_key(|word| std::cmp::Reverse(word.len()));
 
     println!("The following words match the input: {}", output.join(", "));
